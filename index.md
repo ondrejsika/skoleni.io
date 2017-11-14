@@ -23,4 +23,8 @@ Toto je pouze docasny web, na novem se pracuje
 - <skoleni@skoleni.io>
 - +420 773 452 376
 
+### Socialni site
+
+- [Facebook](https://facebook.com/skoleniio)
+- [Twitter](https://twitter.com/skoleniio)
 
