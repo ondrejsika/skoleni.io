@@ -1,0 +1,61 @@
+variables:
+    MINIO_URL: minio-ss.oxs.cz
+    DOMAIN_PROD: skoleni.io
+    DOMAIN_DEV: $CI_PROJECT_PATH_SLUG-$CI_COMMIT_REF_NAME.static.xsika.cz
+
+image: ondrejsika/ci
+
+stages:
+    - build
+    - deploy_dev
+    - deploy_prod
+
+job_build:
+    stage: build
+    script:
+        - docker build -t tmp-$CI_PIPELINE_ID .
+        - docker create --name tmp-$CI_PIPELINE_ID tmp-$CI_PIPELINE_ID
+        - docker cp tmp-$CI_PIPELINE_ID:/usr/share/nginx/html www
+        - docker rm -f tmp-$CI_PIPELINE_ID
+        - docker image rm tmp-$CI_PIPELINE_ID
+    artifacts:
+        name: $CI_PROJECT_PATH_SLUG
+        paths:
+            - www/
+
+job_deploy_dev:
+    stage: deploy_dev
+    except:
+        - production
+    script:
+        - mcli config host add minio $MINIO_URL $MINIO_ACCESS_KEY $MINIO_SECRET_KEY
+        - mcli mb minio/$DOMAIN_DEV || true
+        - mcli cp --recursive www/* minio/$DOMAIN_DEV
+    environment:
+        name: $CI_COMMIT_REF_NAME
+        url: https://$CI_PROJECT_PATH_SLUG-$CI_COMMIT_REF_NAME.static.xsika.cz
+
+job_deploy_prod:
+    stage: deploy_prod
+    when: manual
+    except:
+        - production
+    script:
+        - mcli config host add minio $MINIO_URL $MINIO_ACCESS_KEY $MINIO_SECRET_KEY
+        - mcli mb minio/$DOMAIN_PROD || true
+        - mcli cp --recursive www/* minio/$DOMAIN_PROD
+    environment:
+        name: $DOMAIN_PROD
+        url: https://$DOMAIN_PROD
+
+job_deploy_prod_auto:
+    stage: deploy_prod
+    only:
+        - production
+    script:
+        - mcli config host add minio $MINIO_URL $MINIO_ACCESS_KEY $MINIO_SECRET_KEY
+        - mcli mb minio/$DOMAIN_PROD || true
+        - mcli cp --recursive www/* minio/$DOMAIN_PROD
+    environment:
+        name: $DOMAIN_PROD
+        url: https://$DOMAIN_PROD
