@@ -1,0 +1,42 @@
+[
+  {
+    "course_id": "git",
+    "date": "2018-06-18T00:00:00+02:00",
+    "date_words": "18. června 2018, Praha",
+    "address": "Plzeňská 346/301, Praha 5",
+    "price": "4000 Kč",
+    "schedule": "10:00 – 18:00 s přestávkou na oběd"
+  },
+  {
+    "course_id": "gitlab",
+    "date": "2018-06-19T00:00:00+02:00",
+    "date_words": "19. června 2018, Praha",
+    "address": "Plzeňská 346/301, Praha 5",
+    "price": "4000 Kč",
+    "schedule": "10:00 – 18:00 s přestávkou na oběd"
+  },
+  {
+    "course_id": "docker",
+    "date": "2018-06-25T00:00:00+01:00",
+    "date_words": "25. - 26. června 2018, Praha",
+    "address": "Plzeňská 346/301, Praha 5",
+    "price": "8000 Kč",
+    "schedule": "10:00 – 18:00 s přestávkou na oběd"
+  },
+  {
+    "course_id": "ci-1",
+    "date": "2018-05-29T00:00:00+02:00",
+    "date_words": "29. - 30. května 2018, Praha",
+    "address": "Plzeňská 346/301, Praha 5",
+    "price": "9000 Kč",
+    "schedule": "10:00 – 18:00 s přestávkou na oběd"
+  },
+  {
+    "course_id": "ci-2",
+    "date": "2018-06-05T00:00:00+02:00",
+    "date_words": "5. - 6. června 2018, Praha",
+    "address": "Plzeňská 346/301, Praha 5",
+    "price": "10000 Kč",
+    "schedule": "10:00 – 18:00 s přestávkou na oběd"
+  }
+]
