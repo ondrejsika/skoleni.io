@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/favicon.ico">
+
+    <title>Školení Javascript | Skoleni.io - konzultace, skoleni, workshopy</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href="/blog.css?v2" rel="stylesheet">
+    <link href="/detail.css?v1" rel="stylesheet">
+    <style>
+        body, h1, h2, h3 {
+            font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+        h2, h3, h2 a, h3 a {
+            color: #157c73;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+    <header class="blog-header rounded" style="background: #157c73; margin-top: 15px; margin-bottom: 8px; padding: 20px 0 5px">
+        <div class="row flex-nowrap justify-content-between align-items-center" >
+            <div class="col-12 text-center">
+                <a class="blog-header-logo text-white"  style="text-decoration: overline;" href="/"><h1><strong>skoleni.io</strong></h1></a>
+            </div>
+        </div>
+    </header>
+    <div class="row mb-1">
+        <div class="col-md-12 course-detail">
+            <div class="card flex-md-row mb-4 h-md-100" style="border: none">
+                <div class="card-body d-flex flex-column align-items-start">
+                    <h2 class="mb-10">
+                        Javascript
+                    </h2>
+                    <p class="card-text mb-auto">Javascript se dnes dá považovat za „Jazyk webu“, to je dáno zejména tím, že je jako jediný spustitelný u klienta v prohlížeči. Díky tomu má jazyk jistou popularitu i využití v budoucnu. Poznejte tento jazyk skutečně do hloubky! Na školení si ukážeme, jak správně psát objekty, jak navrhnout a udržovat aplikaci, novinky v Javascriptu (ES6, ES7, ES8), jak testovat Javascript a na co se připravit. To vše si ukážeme na praktických příkladech.</p>
+                </div>
+                <img class="card-img-right flex-auto d-none d-md-block" src="/javascript.png" alt="Card image cap" width="150" height="150" style="height: 150px">
+            </div>
+            <div>
+                <div class="card-body d-flex flex-column align-items-start">
+                    <div id="terms" data-course="javascript">
+                        <div class="spinner"></div>
+                    </div>
+                    <h3>Osnova</h3>
+                    <p>
+                    <ul>
+                        <li>Základní konstrukce jazyka, Pole, Objekt, Number, String&nbsp;apod..</li>
+
+                        <li>Jak procházet, filtrovat a zpracovávat pole.</li>
+
+                        <li>Prototypování, Objetky</li>
+
+                        <li>Hoisting</li>
+
+                        <li>Javasript na serveru a v&nbsp;prohlížeči</li>
+
+                        <li>Dynamický a lexikální kontext</li>
+
+                        <li>Jak funguje v&nbsp;Javascriptu slovo this</li>
+
+                        <li>Asynchronní operace, callbeck hell, Promise, async&nbsp;funce</li>
+
+                        <li>Testování</li>
+
+                        <li>Přehled javasciptových knihoven a nástrojů</li>
+
+                        <li>Debugování a zpracování chyb</li>
+
+                        <li>Minifikace a převod do starších verzí javasriptu</li>
+                    </ul>
+                    </p>
+                    <h3>V ceně kurzu</h3>
+                    <p>
+                        <ul>
+                            <li>Tištěné materiály a podklady</li>
+
+                            <li>Teplé a studené nápoje po celý den</li>
+                        </ul>
+                    </p>
+                    <h3>Požadavky</h3>
+                    <p>
+                        <ul>
+                            <li>Praktická cvičení řeší každý účastník sám na svém notebooku.
+                                Nezáleží na operačním systému. Veškerý potřebný software si
+                                nainstalujeme na začátku kurzu. Je nutné mít administrátorská práva
+                                k&nbsp;počítači.</li>
+
+                            <li>Účastník by měl mít alespoň povědomí o programovaní, co je if, else, funkce apod.</li>
+                        </ul>
+                    </p>
+                    <h3>Lektor</h3>
+                    <p>
+                        Školením Vás bude provázet <strong>Jan Pospíšil</strong>. Honza se o programování a IT zajímá více než 15 let. Od začátku programoval v PHP + Javascriptu a programuje v této kombinaci dodnes. Klidně se ho na cokoliv zeptejte, nebo ho blíže poznejte na <a target="_blank" href="https://www.jan-pospisil.cz">www.jan-pospisil.cz</a>
+                    </p>
+                </div>
+                <div class="card-body">
+                <h2 id="registration">Přihláška</h2>
+                <form id="registration-form">
+                    <div class="form-group" id="terms-selectbox">
+
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Jméno a přijmení</label>
+                        <input type="text" class="form-control" id="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telefon</label>
+                        <input type="text" class="form-control" id="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="note">Poznámka</label>
+                        <textarea class="form-control" id="note" rows="3"></textarea>
+                    </div>
+                    <button id="registration-submit" type="submit" class="btn btn-primary">Objednat školení</button>
+                </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<footer class="blog-footer">
+    <p>Portal <a href="https://skoleni.io/">skoleni.io</a> provozuje <a href="https://ondrej-sika.cz">Ondrej Sika</a></p>
+</footer>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script
+        src="https://code.jquery.com/jquery-3.2.1.js"
+        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+        crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script src="/assets/js/vendor/popper.min.js"></script>
+<script src="/dist/js/bootstrap.min.js"></script>
+<script src="/assets/js/vendor/holder.min.js"></script>
+<script>
+    Holder.addTheme('thumb', {
+        bg: '#55595c',
+        fg: '#eceeef',
+        text: 'Thumbnail'
+    });
+</script>
+
+<!-- REACT -->
+<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prop-types/15.6.0/prop-types.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.js"></script>
+<script type="text/babel" src="/jp/react.js"></script>
+</body>
+</html>
