@@ -1,5 +1,6 @@
 _site/*
-
 *.swp
 .idea
+node_modules
+server.js
 

@@ -1,0 +1,24 @@
+.course-detail{
+    border-radius: 8px !important;
+    border: 1px solid rgba(0,0,0,.125);
+    margin-bottom: 30px;
+}
+
+#terms{
+    display: block;
+    width: 100%;
+    min-height: 40px;
+    margin-bottom: 10px;
+}
+.spinner {
+    display: block;
+    height: 40px;
+    background: url(./spinner.gif);
+    border: 1px solid beige;
+    width: 40px;
+    border: none;
+    margin: 5px auto;
+}
+#terms thead tr {
+    background: #dfd7d8;
+}
